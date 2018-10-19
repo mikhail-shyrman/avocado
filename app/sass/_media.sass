@@ -5,11 +5,44 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
     /**/
+    .header
+        .topHeader
+            .menu
+                justify-content: flex-end
+                padding-right: 30px
 
 
 /* Medium Devices, Desktop */
 @media only screen and (max-width : 992px)
     /**/
+    .header
+        .topHeader
+            .menu
+                .button-menu
+                    display: flex
+                    position: relative
+                ul
+                    display: none
+                    flex-direction: column
+                    width: 100%
+                    align-items: center
+                    margin: 0px
+                    position: absolute
+                    left: 0
+                    right: 0
+                    top: 80px
+                    background-color: rgba( 30, 40, 51, 0.9 )
+                    z-index: 10
+                    li
+                        width: 100%     
+                        a
+                            line-height: 40px
+                            margin: 0 !important
+                            text-align: center
+                            display: inline-block
+                            width: 100% 
+                            &:hover
+                                background-color: rgba( 30, 40, 51, 1 )
 
     
 /* Small Devices, Tablets */
@@ -28,6 +61,16 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 684px)
     /**/
+    .header
+        .topHeader
+            .logo
+                h1
+                    padding-left: 10px
+            .menu
+                padding: 0
+                .button-menu
+                    padding-right: 15px
+
     .about
         .container
             .description
@@ -70,6 +113,9 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
     /**/
+    #button-top
+        a
+            display: none
 
     .analysis
         .container
@@ -97,6 +143,7 @@
                     border-top: 1px solid #53545a
                     padding-top: 10px
                     padding-bottom: 20px
+
     
 /* Custom, iPhones Retina */
 @media only screen and (max-width : 320px)
@@ -123,6 +170,9 @@
 /* Medium Devices, Desktop */
 @media only screen and (min-width : 992px)
     /**/
+    .menu
+        ul
+            display: flex !important
     
     
 /* Large Devices, Wide Screens */

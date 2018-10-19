@@ -17,6 +17,32 @@
 //     }
 // });
 
+$(function(){
+$('.button-menu').click(function(){
+        $('.menu ul').slideToggle();
+    });
+});
+
+$("#menu, #button-top").on("click","a", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault();
+    //забираем идентификатор бока с атрибута href
+    var id  = $(this).attr('href'),
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top;
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate({scrollTop: top}, 1500);
+});
+
+$(function(){
+ $("#button-top").hide().removeAttr("href");
+ if ($(window).scrollTop()>="350") $("#button-top").fadeIn("slow")
+ $(window).scroll(function(){
+  if ($(window).scrollTop()<="350") $("#button-top").fadeOut("slow")
+  else $("#button-top").fadeIn("slow")
+ });
+});
+
 
 //period
 $(function() {
