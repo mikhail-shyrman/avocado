@@ -137,6 +137,25 @@ body a:hover, body a:focus, body a:active, body a:visited {
           flex-wrap: wrap;
 }
 
+.logo img {
+  width: 65px;
+  float: left;
+  display: inline-block;
+  padding-left: 30px;
+  padding-top: 18px;
+}
+
+.logo h1, .logo h2 {
+  padding-left: 10px;
+  float: left;
+  line-height: 81px;
+  font-family: "ProximaNova-Black", sans-serif;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
 .blue-button {
   background: -webkit-gradient(linear, left top, right top, from(#69afe0), to(#5a7cb2));
   background: -webkit-linear-gradient(left, #69afe0, #5a7cb2);
@@ -150,16 +169,22 @@ body a:hover, body a:focus, body a:active, body a:visited {
   text-align: center;
   -webkit-border-radius: 50px;
           border-radius: 50px;
-  box-shadow: -5px 10px 27px 5px rgba(105, 173, 223, 0.27);
-  -webkit-box-shadow: -5px 10px 27px 5px rgba(105, 173, 223, 0.27);
-  -moz-box-shadow: -5px 10px 27px 5px rgba(105, 173, 223, 0.27);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .blue-button:hover {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
   background: -webkit-gradient(linear, right top, left top, from(#69afe0), to(#5a7cb2));
   background: -webkit-linear-gradient(right, #69afe0, #5a7cb2);
   background: -o-linear-gradient(right, #69afe0, #5a7cb2);
   background: linear-gradient(to left, #69afe0, #5a7cb2);
+  box-shadow: -3px 8px 25px 3px rgba(105, 173, 223, 0.27);
+  -webkit-box-shadow: -3px 8px 25px 3px rgba(105, 173, 223, 0.27);
+  -moz-box-shadow: -3px 8px 25px 3px rgba(105, 173, 223, 0.27);
 }
 
 .header {
@@ -174,17 +199,6 @@ body a:hover, body a:focus, body a:active, body a:visited {
 .header .topHeader {
   background-color: #1a1a1a;
   height: 81px;
-}
-
-.header .topHeader .logo h1 {
-  padding-left: 30px;
-  float: left;
-  line-height: 81px;
-  font-family: "ProximaNova-Black", sans-serif;
-  font-weight: 900;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 30px;
 }
 
 .header .topHeader .menu {
@@ -204,7 +218,7 @@ body a:hover, body a:focus, body a:active, body a:visited {
 }
 
 .header .topHeader .menu ul {
-  margin-left: -180px;
+  margin-left: -230px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -218,6 +232,7 @@ body a:hover, body a:focus, body a:active, body a:visited {
 
 .header .topHeader .menu ul li {
   color: #fff;
+  text-transform: uppercase;
 }
 
 .header .topHeader .menu ul li a:hover {
@@ -316,6 +331,7 @@ body a:hover, body a:focus, body a:active, body a:visited {
 .about .description .text {
   text-align: justify;
   padding-bottom: 3rem;
+  font-size: 17px;
 }
 
 .about .description .blue-button {
@@ -346,8 +362,18 @@ body a:hover, body a:focus, body a:active, body a:visited {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-left: 1px solid #585659;
   padding: 1.3rem;
+  position: relative;
+}
+
+.about .details::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #585659;
+  top: 0;
+  left: -45px;
 }
 
 .about .details .item {
@@ -376,11 +402,12 @@ body a:hover, body a:focus, body a:active, body a:visited {
   font-family: "ProximaNova-Bold", sans-serif;
   font-weight: 700;
   font-size: 22px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .about .details .item p {
   padding-bottom: 25px;
+  font-size: 17px;
 }
 
 .analysis {
@@ -453,6 +480,9 @@ body a:hover, body a:focus, body a:active, body a:visited {
   font-weight: 700;
   text-transform: uppercase;
   text-shadow: none;
+  box-shadow: 8px 0px 0px 0px rgba(84, 117, 181, 0.7);
+  -webkit-box-shadow: 8px 0px 0px 0px rgba(84, 117, 181, 0.7);
+  -moz-box-shadow: 8px 0px 0px 0px rgba(84, 117, 181, 0.7);
 }
 
 .analysis .container .selectBox .jq-selectbox__select::after {
@@ -568,6 +598,7 @@ body a:hover, body a:focus, body a:active, body a:visited {
 .video .container .action p {
   text-align: center;
   margin-bottom: 30px;
+  font-size: 17px;
 }
 
 .video .container .action .player {
@@ -642,6 +673,7 @@ body a:hover, body a:focus, body a:active, body a:visited {
 .video .container .tweets p {
   padding-top: 25px;
   text-align: justify;
+  font-size: 17px;
 }
 
 .video .container .tweets article {
@@ -694,23 +726,19 @@ body a:hover, body a:focus, body a:active, body a:visited {
   text-align: center;
   -webkit-border-radius: 50px;
           border-radius: 50px;
-  box-shadow: -5px 10px 27px 5px rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: -5px 10px 27px 5px rgba(255, 255, 255, 0.3);
-  -moz-box-shadow: -5px 10px 27px 5px rgba(255, 255, 255, 0.3);
   -webkit-transition: all 0.3 ease;
   -o-transition: all 0.3 ease;
   transition: all 0.3 ease;
 }
 
 .video .container .tweets .white-button:hover {
-  background-color: #0071b2;
-  color: #fff;
+  color: #5d5d5d;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
-  box-shadow: -5px 10px 27px 5px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: -5px 10px 27px 5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: -5px 10px 27px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: -3px 8px 25px 3px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: -3px 8px 25px 3px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: -3px 8px 25px 3px rgba(255, 255, 255, 0.3);
 }
 
 .mapBg {
@@ -799,7 +827,8 @@ body a:hover, body a:focus, body a:active, body a:visited {
 
 .mapBg .container .feedback form input, .mapBg .container .feedback form textarea {
   font-family: "ProximaNova-Semibold", sans-serif;
-  padding: 20px 25px;
+  font-size: 15px;
+  padding: 19px 25px;
   -webkit-border-radius: 7px;
           border-radius: 7px;
   outline: none;
@@ -1002,7 +1031,8 @@ body a:hover, body a:focus, body a:active, body a:visited {
 
 .footer .contact .subscribe input {
   font-family: "ProximaNova-Semibold", sans-serif;
-  padding: 20px 25px;
+  font-size: 15px;
+  padding: 19px 25px;
   width: 100%;
   -webkit-border-radius: 7px;
           border-radius: 7px;
@@ -1119,8 +1149,8 @@ body a:hover, body a:focus, body a:active, body a:visited {
 /* Small Devices, Tablets */
 @media only screen and (max-width: 838px) {
   /**/
-  .about .container .details {
-    border: none;
+  .about .container .details::before {
+    content: none;
   }
 }
 
@@ -1133,13 +1163,13 @@ body a:hover, body a:focus, body a:active, body a:visited {
 @media only screen and (max-width: 684px) {
   /**/
   .header .topHeader .logo h1 {
-    padding-left: 10px;
+    display: none;
   }
   .header .topHeader .menu {
     padding: 0;
   }
   .header .topHeader .menu .button-menu {
-    padding-right: 15px;
+    padding-right: 20px;
   }
   .about .container .description {
     padding: 2rem;
